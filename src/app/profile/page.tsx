@@ -360,6 +360,8 @@ export default function ProfilePage() {
   };
 
   const isAdminViewer = user?.role === 'admin';
+  // Tijdelijk uit voor presentatie — zet weer op true om het admin-testpaneel terug te krijgen.
+  const SHOW_ADMIN_TEST_PANEL = false;
 
   const renderTerminalLine = (line: string, index: number) => {
     const parts = line.split(/(PASSED|FAILED)/g);
@@ -673,7 +675,7 @@ export default function ProfilePage() {
 
               {adminToggleError && <p className="mt-2 text-xs text-red-600">{adminToggleError}</p>}
 
-              {isAdminViewer && (
+              {SHOW_ADMIN_TEST_PANEL && isAdminViewer && (
                 <div className="mt-6 space-y-4 rounded-2xl border border-slate-200 bg-slate-50 p-4">
                   <div className="flex flex-wrap items-center justify-between gap-3">
                     <div>
