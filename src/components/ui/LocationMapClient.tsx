@@ -183,7 +183,7 @@ export default function LocationMapClient({ lat, lng, onLocationSelect, readOnly
       )}
       <div
         ref={containerRef}
-        className={`w-full overflow-hidden rounded-xl border border-gray-200 ${readOnly ? 'h-44' : 'h-52'}`}
+        className={`relative isolate z-0 w-full overflow-hidden rounded-xl border border-gray-200 ${readOnly ? 'h-44' : 'h-52'}`}
       />
       {!readOnly && (
         <p className="text-xs text-gray-400">Zoek een locatie of klik op de kaart om de pin te plaatsen.</p>
